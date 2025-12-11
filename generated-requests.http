@@ -1,0 +1,51 @@
+###
+POST http://localhost:8080/documents
+Content-Type: application/json
+
+{
+  "title": "aaa",
+  "content": "this is a content",
+  "tags": ["simple", "text"]
+}
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۱۷۲۸.200.json
+
+###
+POST http://localhost:8080/documents
+Content-Type: application/json
+
+{
+  "title": "bbb",
+  "content": "Deep learning models such as CNN, RNN...",
+  "tags": ["deep", "ai"]
+}
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۰۲۸.200.json
+
+
+###
+GET http://localhost:8080/documents
+
+
+###
+GET http://localhost:8080/documents/search?query=aaa&mode=title
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۲۱۹.200.json
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۲۰۴.200.json
+
+###
+GET http://localhost:8080/documents/search?query=deep&mode=tag
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۵۲۲.200.json
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۴۰۵.200.json
+
+###
+GET http://localhost:8080/documents/search?query=this&mode=content
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۷۲۸.200.json
+
+###
+GET http://localhost:8080/documents/search?query=a&mode=all
+
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۸۴۱.200.json
+<> ۲۰۲۵-۱۲-۱۱T۱۴۲۸۱۳.200.json
